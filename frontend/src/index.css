@@ -2836,3 +2836,48 @@ width: 50px;
 
 
 
+
+
+/* 📱 Mobile screens (max 768px) */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem; /* smaller for tablets & phones */
+  }
+ .hero h1 {
+    font-size: 2rem; /* smaller for tablets & phones */
+  }
+  .section {
+    padding: 70px 50px;
+  }
+  .btn {
+    padding: 11px 18px;
+    font-weight: 600;
+  }
+  .site-title {
+    font-size: 1rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+ 
+}
+
+/* 📱 Small phones (max 480px) */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem; /* smaller for tablets & phones */
+  }
+  .section {
+    padding: 70px 50px;
+  }
+  .btn {
+    padding: 11px 18px;
+    font-weight: 600;
+  }
+  .site-title {
+    font-size: 1rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}
