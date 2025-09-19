@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import services from "./data/services.js";
+import WhyChooseUs from "../components/WhyChooseUs";
+import Testimonials from "../components/Testimonials";
 
 export default function Services() {
   return (
@@ -29,6 +31,12 @@ export default function Services() {
           ))}
         </div>
       </section>
+
+      {/* Why Choose Us */}
+      <WhyChooseUs />
+
+      {/* Testimonials */}
+      <Testimonials />
     </div>
   );
 }

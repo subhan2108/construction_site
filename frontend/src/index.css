@@ -1,6 +1,31 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+
+
+
+@keyframes underlineExpand {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+.animate-underline {
+  display: block;              /* makes the underline span visible as a block */
+  height: 3.5px;                 /* underline thickness */
+  background: #e63946;         /* underline color */
+  animation: underlineExpand 2s ease-out forwards;
+}
+
+html {
+  scroll-behavior: smooth 2s;
+}
 
 
 /* Construction Theme Colors */

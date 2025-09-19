@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import projects from "./data/projects.js"; // same approach as services
+import WhyChooseUs from "../components/WhyChooseUs";
+import Testimonials from "../components/Testimonials";
 
 export default function Projects() {
   return (
@@ -34,6 +36,12 @@ export default function Projects() {
           </div>
         </div>
       </section>
+
+      {/* Why Choose Us */}
+      <WhyChooseUs />
+
+      {/* Testimonials */}
+      <Testimonials />
     </div>
   );
 }

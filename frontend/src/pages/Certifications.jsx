@@ -1,3 +1,6 @@
+import WhyChooseUs from "../components/WhyChooseUs";
+import Testimonials from "../components/Testimonials";
+
 export default function Certifications() {
   const certs = [
     { id: 1, title: "ISO 9001", file: "cr1.jpg" },
@@ -34,6 +37,12 @@ export default function Certifications() {
           </div>
         ))}
       </div>
+
+      {/* Why Choose Us */}
+      <WhyChooseUs />
+
+      {/* Testimonials */}
+      <Testimonials />
     </div>
   );
 }

@@ -17,6 +17,7 @@ import HSE from "./pages/HSE";
 import Careers from "./pages/Careers";
 import Register from "./pages/Register";
 import Loader from "./components/Loader";
+import SmoothScroll from "./components/SmoothScroll";
 
 
 export default function App() {
@@ -32,6 +33,7 @@ export default function App() {
   return loading ? <Loader /> : (
     <BrowserRouter>
       <div className="flex flex-col min-h-screen">
+        <SmoothScroll>
         <Navbar />
         <main className="flex-grow">
           <Routes>
@@ -62,6 +64,7 @@ export default function App() {
           </Routes>
         </main>
         <Footer />
+        </SmoothScroll>
       </div>
     </BrowserRouter>
   );
