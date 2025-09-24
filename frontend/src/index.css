@@ -26,6 +26,12 @@
 html {
   scroll-behavior: smooth 2s;
 }
+/* index.css or a global stylesheet */
+.mask-chevron {
+  -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='black' stroke-width='8' viewBox='0 0 24 24'><path d='M15 18l-6-6 6-6'/></svg>") center / contain no-repeat;
+  mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='black' stroke-width='8' viewBox='0 0 24 24'><path d='M15 18l-6-6 6-6'/></svg>") center / contain no-repeat;
+}
+
 
 
 /* Construction Theme Colors */
@@ -613,11 +619,8 @@ html {
   color: #fff;
   position: relative;
 }
-.services-hero .overlay {
-  background: rgba(0,0,0,0.5);
-  padding: 4px;
-  text-align: center;
-}
+
+
 .services-hero h1 {
   font-size: 2.5rem;
   margin-bottom: 10px;
@@ -1855,7 +1858,7 @@ background: #e60023;
 .mission-vision i {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: #ec4899;
+  color: #e6b800;
 }
 
 .mission-vision h3 {
@@ -1928,6 +1931,11 @@ background: #e60023;
 
 
 
+.relative {
+    position: relative;
+    top: 2px;
+}
+
 
 
 
@@ -1948,7 +1956,7 @@ background: #e60023;
 
 .services-hero #overlay {
   text-align: center;
-  background: rgba(0, 0, 0, 0.55);
+  
   padding: 2rem;
   border-radius: 10px;
 }
@@ -2905,4 +2913,26 @@ width: 50px;
   .hero p {
     font-size: 1rem;
   }
+}
+
+
+/* Hide Google branding */
+.goog-logo-link,
+.goog-te-gadget span,
+.goog-te-banner-frame {
+  display: none !important;
+}
+.goog-te-gadget {
+  color: transparent !important;
+}
+
+/* Style dropdown */
+#google_translate_element select {
+  background: #1d4ed8; /* Tailwind blue-600 */
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
 }

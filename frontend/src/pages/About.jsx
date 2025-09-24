@@ -1,159 +1,270 @@
+import { useLanguage } from "../context/LanguageProvider";
+import { motion } from "framer-motion";
+
 export default function About() {
+  const { t, lang } = useLanguage();
+
+  // ✅ Reusable animation variants
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 40 },
+    visible: (i = 0) => ({
+      opacity: 1,
+      y
+      : 0,
+      transition: { duration: 0.6, delay: i * 0.2 },
+    }),
+  };
+
+  const Onlyhover = {
+    hidden: { opacity: 0, x: -40 },
+    visible: (i = 0) => ({
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.6, delay: i * 0.2 },
+    }),
+  };
+
   return (
-    <div className="about-page">
-      {/* ✅ Hero Banner */}
-      <section className="about-hero">
-        <div id="overlay">
-          <h1>About Us</h1>
-          <p>Building with Excellence & Integrity</p>
+    <div className="about-page" dir={lang === "ar" ? "rtl" : "ltr"}>
+      {/* ✅ Hero Banner with Background Image */}
+      <section
+        className="relative h-[60vh] flex items-center justify-center bg-center bg-cover"
+        style={{ backgroundImage: "url('/banner.jpg')" }} // ✅ replace with your banner
+      >
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/60"></div>
+
+        {/* Text Content */}
+        <div className="relative z-10 text-center px-6">
+          <motion.h1
+            initial="hidden"
+            animate="visible"
+            variants={Onlyhover}
+            className="text-4xl md:text-5xl font-bold text-white mb-4"
+          >
+            {t.aboutPage.heroTitle.split(" ").map((word, idx) => {
+              const isHighlight = word === "About" || word === "من";
+              return (
+                <span
+                  key={idx}
+                  className={`relative inline-block mx-2 ${
+                    isHighlight ? "text-red-600" : "text-white"
+                  }`}
+                >
+                  {word}
+                  {isHighlight && (
+                    <span
+                      className={`absolute ${
+                        lang === "ar" ? "right-0" : "left-0"
+                      } -bottom-1 w-0 h-[2px] bg-[#e63946] animate-underline`}
+                    ></span>
+                  )}
+                </span>
+              );
+            })}
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            className="text-lg md:text-xl text-gray-200"
+          >
+            Excellence proven by global standards
+          </motion.p>
         </div>
       </section>
 
       {/* ✅ Company Intro */}
-      <section className="about-intro">
-        <div className="container">
-          <h2>Who We Are</h2>
-          <p>
-            Crafting structures that last a lifetime. We combine advanced
-            materials, resilient design, and sustainable practices to create
-            innovative and durable projects. With decades of expertise, our team
-            ensures quality and precision at every stage.
+      <section className="about-intro py-16 px-6 md:px-12">
+        <motion.div
+          className="max-w-5xl mx-auto text-center"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+        >
+          <h2 className="text-3xl font-bold text-red-600 mb-6">
+            {t.aboutPage.whoWeAre.title}
+          </h2>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            {t.aboutPage.whoWeAre.text}
           </p>
-        </div>
+        </motion.div>
       </section>
 
+      {/* ✅ About Section */}
+      <section className="about-section grid md:grid-cols-2 gap-12 px-6 md:px-12 py-16 items-center">
+        {/* Left Text */}
+        <motion.div
+          className="space-y-4"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+        >
+          <span className="uppercase tracking-widest text-red-600 font-semibold">
+            {t.aboutPage.section.label}
+          </span>
+          <h2 className="text-3xl font-bold">{t.aboutPage.section.title}</h2>
+          <p className="text-gray-600 leading-relaxed">
+            {t.aboutPage.section.text}
+          </p>
+        </motion.div>
 
+        {/* Right Image */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+        >
+          <img
+            src="bl.jpg"
+            alt="About Us"
+            className="rounded-lg shadow-lg object-cover"
+          />
+        </motion.div>
+      </section>
 
+      {/* ✅ About Detail */}
+      <section className="about-detail alt-layout grid md:grid-cols-2 gap-12 px-6 md:px-12 py-16 items-center bg-gray-50">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+        >
+          <img
+            src="ll.jpg"
+            alt="Our Team at Work"
+            className="rounded-lg shadow-lg object-cover"
+          />
+        </motion.div>
 
-<section className="about-section">
-      {/* Left Content */}
-      <div className="about-content">
-        <span className="about-label">ABOUT US</span>
-        <h2 className="about-title">Building trust, delivering excellence</h2>
-        <p className="about-description">
-          At Certification & Compliance Est — General Contracting, we specialize 
-          in delivering high-quality construction solutions tailored to our clients’ 
-          unique needs. With years of expertise in civil works, MEP services, and 
-          project management, we are committed to innovation, safety, and 
-          on-time delivery.
-        </p>
-      </div>
+        <motion.div
+          className="space-y-4"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+        >
+          <h2 className="text-3xl font-bold text-red-600">
+            {t.aboutPage.detail.title}
+          </h2>
+          <p className="text-gray-600 leading-relaxed">
+            {t.aboutPage.detail.text}
+          </p>
+        </motion.div>
+      </section>
+{/* ✅ Mission & Vision */}
+<section className="mission-vision py-20 px-6 md:px-12 bg-gradient-to-r from-gray-50 to-white">
+  <motion.div
+    className="max-w-6xl mx-auto text-center mb-12"
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true }}
+    variants={fadeInUp}
+  >
+    <h2 className="text-3xl md:text-4xl font-bold text-red-600">
+      {lang === "ar" ? "مهمتنا ورؤيتنا" : "Our Mission & Vision"}
+    </h2>
+  </motion.div>
 
-      {/* Right Image */}
-      <div className="about-image">
-        <img src="bl.jpg" alt="About Us" />
-      </div>
-    </section>
-
-{/* ✅ About Detail Section (Image Left, Text Right) */}
-<section className="about-detail alt-layout">
-  <div className="about-container">
-    {/* Left Side → Image */}
-    <div className="about-image">
-      <img 
-        src="ll.jpg" 
-        alt="Our Team at Work" 
-      />
-    </div>
-
-    {/* Right Side → Text */}
-    <div className="about-text">
-     
-      <h2>Shaping Tomorrow with Excellence</h2>
-      <p>
-        With years of industry expertise, our company has been at the forefront 
-        of delivering innovative construction solutions. From civil works to MEP 
-        and interior fit-outs, we are committed to exceeding expectations. 
-        Our approach combines cutting-edge technology, sustainable practices, 
-        and a strong focus on safety and quality.
-      </p>
-    </div>
+  <div className="grid md:grid-cols-2 gap-8">
+    {t.aboutPage.missionVision.map((card, idx) => (
+      <motion.div
+        key={idx}
+        className="bg-white rounded-xl shadow-md hover:shadow-xl p-10 transition transform hover:-translate-y-2 text-center"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeInUp}
+        custom={idx}
+      >
+        {/* ✅ Red icons */}
+        <i className={`${card.icon} text-5xl text-red-600 mb-6`}></i>
+        <h3 className="text-xl font-semibold mb-4 text-yellow-500">
+          {card.title}
+        </h3>
+        <p className="text-gray-600 leading-relaxed">{card.text}</p>
+      </motion.div>
+    ))}
   </div>
 </section>
 
-   
+{/* ✅ Values */}
+<section className="values py-20 px-6 md:px-12 bg-gray-50">
+  <motion.div
+    className="max-w-6xl mx-auto text-center"
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true }}
+    variants={fadeInUp}
+  >
+    <h2 className="text-3xl md:text-4xl font-bold text-red-600 mb-16">
+      {t.aboutPage.values.title}
+    </h2>
+    <div className="grid md:grid-cols-3 gap-10">
+      {t.aboutPage.values.items.map((value, idx) => (
+        <motion.div
+          key={idx}
+          className="p-8 bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+          custom={idx}
+        >
+          {/* ✅ Blue icons */}
+          <i className={`${value.icon} text-4xl text-blue-600 mb-6`}></i>
+          <h4 className="text-lg font-semibold mb-3">{value.title}</h4>
+          <p className="text-gray-600">{value.text}</p>
+        </motion.div>
+      ))}
+    </div>
+  </motion.div>
+</section>
+
+{/* ✅ Members */}
+<section className="members py-20 px-6 md:px-12">
+  <motion.div
+    className="max-w-6xl mx-auto text-center"
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true }}
+    variants={fadeInUp}
+  >
+    <h2 className="text-3xl md:text-4xl font-bold text-red-600 mb-16">
+      {t.aboutPage.members.title}
+    </h2>
+    <div className="grid md:grid-cols-3 gap-10">
+      {t.aboutPage.members.items.map((member, idx) => (
+        <motion.div
+          key={idx}
+          className="bg-white rounded-xl shadow-md hover:shadow-2xl overflow-hidden transition transform hover:-translate-y-2 flex flex-col items-center p-8"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+          custom={idx}
+        >
+          {/* ✅ Small circular centered photo */}
+          <img
+            src={member.image}
+            alt={member.name}
+            className="w-28 h-28 object-cover rounded-full mb-6 shadow-md"
+          />
+          <h4 className="text-lg font-semibold text-red-600 mb-2">
+            {member.name}
+          </h4>
+          <p className="text-gray-600">{member.role}</p>
+        </motion.div>
+      ))}
+    </div>
+  </motion.div>
+</section>
 
 
-      {/* ✅ Mission & Vision */}
-      <section className="mission-vision">
-        <div className="container grid">
-          <div className="card">
-            <i className="fas fa-bullseye"></i>
-            <h3>Our Mission</h3>
-            <p>
-              To deliver innovative, safe, and sustainable construction
-              solutions that exceed client expectations while creating lasting
-              value for communities.
-            </p>
-          </div>
-          <div className="card">
-            <i className="fas fa-eye"></i>
-            <h3>Our Vision</h3>
-            <p>
-              To be recognized as a leader in construction excellence — where
-              innovation, quality, and trust drive every project we undertake.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* ✅ Values Section */}
-      <section className="values">
-        <div className="container">
-          <h2>Our Core Values</h2>
-          <div className="grid">
-            <div className="value-card">
-              <i className="fas fa-hard-hat"></i>
-              <h4>Safety First</h4>
-              <p>We prioritize health, safety, and environment at every step.</p>
-            </div>
-            <div className="value-card">
-              <i className="fas fa-check-circle"></i>
-              <h4>Quality Assurance</h4>
-              <p>
-                Commitment to excellence through strict QA/QC standards and
-                meticulous execution.
-              </p>
-            </div>
-            <div className="value-card">
-              <i className="fas fa-handshake"></i>
-              <h4>Client Trust</h4>
-              <p>
-                Building long-term relationships through honesty, transparency,
-                and collaboration.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-
-
-
-      {/* ✅ Members Section */}
-      <section className="values">
-        <div className="container">
-          <h2>Our Members</h2>
-          <div className="grid">
-            <div className="value-card">
-              <img src="mm.jpg" alt="member" />
-              <h4>Muhammad Sharif Gamdi</h4>
-              <p>Director — 20+ years of leadership in construction.</p>
-            </div>
-            <div className="value-card">
-              <img src="mm6.jpg" alt="member" />
-              <h4>Muhammad Shayzan khan</h4>
-              <p>Project Director — Ensures timely delivery with quality.</p>
-            </div>
-            <div className="value-card">
-              <img src="mm7.jpg" alt="member" />
-              <h4>Muhammad Mahmud Gazni</h4>
-              <p>Lead Engineer — Specialist in sustainable building designs.</p>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
