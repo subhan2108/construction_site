@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useLanguage } from "../context/LanguageProvider";
 import "../index.css";
 
 export default function Register() {
@@ -9,11 +10,17 @@ export default function Register() {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
+  const API_URL = import.meta.env.VITE_API_BASE_URL;
+
+  // ✅ get translations
+  const { t } = useLanguage();
+  const register = t.RegisterPage;
+
   const handleRegister = async (e) => {
     e.preventDefault();
 
     try {
-      const res = await fetch("http://127.0.0.1:8000/api/register/", {
+      const res = await fetch(`${API_URL}/register/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, email, password }),
@@ -23,37 +30,50 @@ export default function Register() {
         navigate("/login");
       } else {
         const data = await res.json();
-        setError(data.detail || "Registration failed");
+        setError(data.detail || register.message5);
       }
     } catch (err) {
-      setError("Something went wrong");
+      setError(register.message6);
     }
   };
 
   return (
-    <div className="auth-box">
-      <h2>Create Account</h2>
-      {error && <p style={{ color: "red" }}>{error}</p>}
-      <form onSubmit={handleRegister}>
+    <div className="auth-box" style={{ marginTop: "100px" }}>
+      <h2 className="text-2xl font-bold mb-6 text-center">{register.Title}</h2>
+
+      {error && <p style={{ color: "red", marginBottom: "1rem" }}>{error}</p>}
+
+      <form
+        onSubmit={handleRegister}
+        style={{ display: "flex", flexDirection: "column", gap: "1rem" }}
+      >
         <input
           type="text"
-          placeholder="Username"
+          placeholder={register.message1}
           value={username}
           onChange={(e) => setUsername(e.target.value)}
+          className="border p-2 rounded"
+          required
         />
         <input
           type="email"
-          placeholder="Email"
+          placeholder={register.message2}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          className="border p-2 rounded"
+          required
         />
         <input
           type="password"
-          placeholder="Password"
+          placeholder={register.message3}
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          className="border p-2 rounded"
+          required
         />
-        <button className="btn btn-primary w-full">Register</button>
+        <button type="submit" className="btn btn-primary w-full">
+          {register.message4}
+        </button>
       </form>
     </div>
   );

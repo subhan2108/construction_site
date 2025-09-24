@@ -34,7 +34,7 @@ export default function Certifications() {
             transition={{ duration: 1, ease: "easeOut" }}
             className="text-4xl md:text-5xl font-bold text-white mb-4"
           >
-            {["Our", "Achievements"].map((word, idx) => {
+            {t.certificationsPage.heroTitle.split(" ").map((word, idx) => {
               const isHighlight = word === "Achievements" || word === "إنجازاتنا";
               return (
                 <span
@@ -61,7 +61,7 @@ export default function Certifications() {
             transition={{ duration: 1, delay: 0.5 }}
             className="text-lg md:text-xl text-gray-200"
           >
-            Excellence proven by global standards
+            {t.certificationsPage.heroSubtitle}
           </motion.p>
         </div>
       </section>
@@ -69,7 +69,7 @@ export default function Certifications() {
       {/* ✅ Certifications Grid */}
       <section className="py-16 px-6 md:px-12 bg-gray-50">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-red-600">
-          Certifications
+          {t.certificationsPage.gridtitle}
         </h2>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           {certs.map((c, idx) => (

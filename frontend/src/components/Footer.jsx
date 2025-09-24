@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useLanguage } from "../context/LanguageProvider";
 
+
 export default function footer() {
   const { t } = useLanguage();
 

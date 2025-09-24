@@ -47,11 +47,10 @@ const translations = {
       "Crafting structures that last a lifetime. We combine advanced materials, resilient design, and sustainable practices to create innovative and durable projects. With decades of expertise, our team ensures quality and precision at every stage.",
     services: "Our Services",
     projects: "Featured Projects",
-    statsTitle: "We are a Leading Saudi Contracting Group",
     headingstats: "We are a Leading Saudi Contracting Group",
-    stats1: "",
-    stats2: "",
-    stats3: "",
+    stats1: "Projects Delivered",
+    stats2: "Production Plants",
+    stats3: "Clients",
     stats4: "",
     stats5: "",
     stats6: "",
@@ -326,6 +325,13 @@ const translations = {
     
     ],
 
+
+    certificationsPage: {
+      heroTitle: "Our Achievements",
+      heroSubtitle: "Excellence proven by global standards",
+      gridtitle: "Certifications",
+    },
+
     footer: {
       aboutTitle: "Al Tawafuq Advance Contracting Company",
       aboutTitleAr: "(شركة التوافق المتقدمة للمقاولات)",
@@ -352,7 +358,46 @@ const translations = {
       followUs: "Follow Us",
       rights: "All Rights Reserved",
     },
+
+    ContactPage: {
+      Title: "Contact Us",
+      message1: "Message sent successfully!",
+       message2:"Name",
+        message3:"Email",
+         message4:"Phone",
+          message5:"Message",
+           message6:"Send",
+    },
+CareersPage: {
+      Title: "Careers",
+      message1: "Message sent successfully!",
+       message2:"Name",
+        message3:"Email",
+         message4:"apply",
+    },
+    LoginPage: {
+      Title: "Login",
+      message1: "Login successful!",
+       message2:"Invalid credentials",
+        message3:"Something went wrong",
+         message4:"Username",
+          message5:"Password",
+           message6:"Don’t have an account?",
+           message7:"Register",
+    },
+    RegisterPage: {
+      Title: "Create Account",
+      message1: "Username",
+       message2:"Email",
+        message3:"Password",
+         message4:"Register",
+          message5:"Registration failed",
+           message6:"Something went wrong",
+    },
+    
   },
+
+
   ar: {
     nav: {
       Companyname: "المتقدمة للمقاولات",
@@ -390,11 +435,10 @@ const translations = {
       "بناء هياكل تدوم مدى الحياة. نحن ندمج المواد المتطورة، والتصاميم المتينة، والممارسات المستدامة لابتكار مشاريع مبتكرة ومرنة. وبخبرة تمتد لعقود، يضمن فريقنا الجودة والدقة في كل مرحلة.",
     services: "خدماتنا",
     projects: "المشاريع المميزة",
-    statsTitle: "نحن مجموعة مقاولات رائدة في السعودية",
     headingstats: "نحن مجموعة مقاولات رائدة في المملكة العربية السعودية",
-    stats1: "",
-    stats2: "",
-    stats3: "",
+    stats1: "المشاريع المنجزة",
+    stats2: "محطات الإنتاج",
+    stats3: "العملاء",
     stats4: "",
     stats5: "",
     stats6: "",
@@ -653,6 +697,12 @@ const translations = {
   },
     ],
 
+    certificationsPage: {
+      heroTitle: "إنجازاتنا",
+      heroSubtitle: "تميز مثبت بالمعايير العالمية",
+      gridtitle: "الشهادات",
+    },
+
     footer: {
       aboutTitle: "شركة التوافق المتقدمة للمقاولات",
       aboutTitleAr: "(Al Tawafuq Advance Contracting Company)",
@@ -678,6 +728,42 @@ const translations = {
       poBox: "ص.ب: 10433 – الرمز: 21331",
       followUs: "تابعنا",
       rights: "جميع الحقوق محفوظة",
+    },
+
+    ContactPage: {
+      Title: "ہم سے رابطہ کریں",
+      message1: "پیغام کامیابی سے بھیج دیا گیا!",
+      message2: "نام",
+      message3: "ای میل",
+      message4: "فون",
+      message5: "پیغام",
+      message6: "بھیجیں",
+    },
+    CareersPage: {
+      Title: "کریئرز",
+      message1: "پیغام کامیابی سے بھیج دیا گیا!",
+      message2: "نام",
+      message3: "ای میل",
+      message4: "درخواست دیں",
+    },
+    LoginPage: {
+      Title: "لاگ ان",
+      message1: "لاگ ان کامیاب!",
+      message2: "غلط اسناد",
+      message3: "کچھ غلط ہو گیا",
+      message4: "یوزر نیم",
+      message5: "پاس ورڈ",
+      message6: "اکاؤنٹ نہیں ہے؟",
+      message7: "رجسٹر کریں",
+    },
+    RegisterPage: {
+      Title: "اکاؤنٹ بنائیں",
+      message1: "یوزر نیم",
+      message2: "ای میل",
+      message3: "پاس ورڈ",
+      message4: "رجسٹر کریں",
+      message5: "رجسٹریشن ناکام",
+      message6: "کچھ غلط ہو گیا",
     },
   },
 };

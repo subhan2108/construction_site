@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useLanguage } from "../context/LanguageProvider";
 import "../index.css";
 
 export default function Login() {
@@ -7,6 +8,13 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
+  const navigate = useNavigate();
+
+  const API_URL = import.meta.env.VITE_API_BASE_URL;
+
+  // get translations
+  const { t } = useLanguage();
+  const login = t.LoginPage;
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -14,7 +22,7 @@ export default function Login() {
     setSuccess("");
 
     try {
-      const res = await fetch("http://127.0.0.1:8000/api/token/", {
+      const res = await fetch(`${API_URL}/token/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),
@@ -25,42 +33,57 @@ export default function Login() {
 
       if (res.ok) {
         localStorage.setItem("token", data.access);
-        setSuccess("✅ Login successful!");
+        setSuccess(`✅ ${login.message1}`);
+        setTimeout(() => {
+          navigate("/careers");
+        }, 1000);
       } else {
-        setError(data.detail || "❌ Invalid credentials");
+        setError(data.detail || `❌ ${login.message2}`);
       }
     } catch (err) {
       console.error(err);
-      setError("❌ Something went wrong");
+      setError(`❌ ${login.message3}`);
     }
   };
 
   return (
-    <div className="auth-box">
-      <h2>Login</h2>
-      {error && <p style={{ color: "red" }}>{error}</p>}
-      {success && <p style={{ color: "green" }}>{success}</p>}
+    <div className="auth-box" style={{ marginTop: "100px" }}>
+      <h2 className="text-2xl font-bold mb-6 text-center">{login.Title}</h2>
 
-      <form onSubmit={handleLogin}>
+      {error && <p style={{ color: "red", marginBottom: "1rem" }}>{error}</p>}
+      {success && (
+        <p style={{ color: "green", marginBottom: "1rem" }}>{success}</p>
+      )}
+
+      <form
+        onSubmit={handleLogin}
+        style={{ display: "flex", flexDirection: "column", gap: "1rem" }}
+      >
         <input
           type="text"
-          placeholder="Username"
+          placeholder={login.message4}
           value={username}
           onChange={(e) => setUsername(e.target.value)}
+          className="border p-2 rounded"
+          required
         />
         <input
           type="password"
-          placeholder="Password"
+          placeholder={login.message5}
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          className="border p-2 rounded"
+          required
         />
-        <button className="btn btn-primary w-full">Login</button>
+        <button type="submit" className="btn btn-primary w-full">
+          {login.Title}
+        </button>
       </form>
 
       <p className="mt-4 text-center">
-        Don’t have an account?{" "}
+        {login.message6}{" "}
         <Link to="/register" className="text-brand-yellow font-semibold">
-          Register
+          {login.message7}
         </Link>
       </p>
     </div>

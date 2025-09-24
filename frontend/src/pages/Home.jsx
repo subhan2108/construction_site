@@ -53,9 +53,9 @@ export default function Home() {
   ];
 
   const stats = [
-    { value: 300, suffix: "+", label: "Projects Delivered" },
-    { value: 50, suffix: "+", label: "Production Plants" },
-    { value: 100, suffix: "+", label: "Clients" },
+    { value: 300, suffix: "+", label: t.stats1 },
+    { value: 50, suffix: "+", label: t.stats2 },
+    { value: 100, suffix: "+", label: t.stats3 },
     
   ];
 
@@ -219,7 +219,7 @@ export default function Home() {
       {/* ✅ Stats Counter Section */}
       <section className="bg-gray-100 py-16 text-center" dir="ltr">
         <h2 className="text-2xl md:text-3xl font-bold mb-12">
-          We are a Leading Saudi Contracting Group
+          {t.headingstats}
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 max-w-6xl mx-auto">
           {stats.map((stat, i) => (

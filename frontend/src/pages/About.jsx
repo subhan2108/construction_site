@@ -69,7 +69,7 @@ export default function About() {
             transition={{ duration: 1, delay: 0.5 }}
             className="text-lg md:text-xl text-gray-200"
           >
-            Excellence proven by global standards
+            {t.aboutPage.heroSubtitle}
           </motion.p>
         </div>
       </section>

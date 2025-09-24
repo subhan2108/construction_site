@@ -57,7 +57,7 @@ export default function Services() {
             transition={{ duration: 1, delay: 0.5 }}
             className="text-lg md:text-xl text-gray-200"
           >
-            Excellence proven by global standards
+            {t.servicesPage.heroSubtitle}
           </motion.p>
         </div>
       </section>
