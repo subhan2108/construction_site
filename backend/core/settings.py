@@ -32,7 +32,7 @@ SECRET_KEY = 'django-insecure-mjnvl=bj5g95vr5v=1g7vp8(isyt#0ps!_io5xs2c+z5o(ni+4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = [""]
+ALLOWED_HOSTS =["127.0.0.1", "localhost", "https://al-tawafuk-api.onrender.com/"]
 
 
 # Application definition
