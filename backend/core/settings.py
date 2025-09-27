@@ -64,8 +64,9 @@ MIDDLEWARE = [
 
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",
-    "http://127.0.0.1:5173",
+    "http://localhost:5173",   # dev React
+    "http://127.0.0.1:8000",   # dev Django
+    "https://construction-site-ebon.vercel.app",  # your frontend on Vercel
 ]
 
 
