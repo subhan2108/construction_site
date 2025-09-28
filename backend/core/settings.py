@@ -64,10 +64,20 @@ MIDDLEWARE = [
 
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",   # dev React
-    "http://127.0.0.1:8000",   # dev Django
-    "https://construction-site-ebon.vercel.app",  # your frontend on Vercel
+    "http://localhost:5173",          # Local React dev
+    "http://127.0.0.1:8000",          # Local Django dev
+    "https://construction-site-ebon.vercel.app",  # Vercel frontend preview
+    "https://al-tawafuk.com",         # Custom domain root
+    "https://www.al-tawafuk.com",     # Custom domain www
 ]
+
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://al-tawafuk.com",
+    "https://www.al-tawafuk.com",
+    "https://api.al-tawafuk.com",
+]
+
 
 
 ROOT_URLCONF = 'core.urls'
