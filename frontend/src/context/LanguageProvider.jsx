@@ -95,13 +95,17 @@ const translations = {
       ],
     },
 
+     
+
+
+
     testimonials: {
       title: "TESTIMONIALS",
       subtitle: "What our clients say",
       reviews: [
         {
           id: 1,
-          name: "Ahmed bin Ali Al-Ansari",
+          name: "Saleh Isa Hamd",
           role: "Corporate Client",
           image: "s1.jpg",
           review:
@@ -109,7 +113,7 @@ const translations = {
         },
         {
           id: 2,
-          name: "Khalid Al-Otaibi",
+          name: "Abu Fahdi Qanai",
           role: "Business Owner",
           image: "s2.jpg",
           review:
@@ -117,7 +121,7 @@ const translations = {
         },
         {
           id: 3,
-          name: "Omar Al-Farooq",
+          name: "Abu hamza Ghamdi",
           role: "Commercial Client",
           image: "s3.jpg",
           review:
@@ -511,7 +515,7 @@ CareersPage: {
       reviews: [
         {
   id: 1,
-  name: "أحمد بن علي الأنصاري",
+  name: "صالح عيسى حمد",
   role: "عميل شركات",
   image: "s1.jpg",
   review:
@@ -519,7 +523,7 @@ CareersPage: {
 },
 {
   id: 2,
-  name: "خالد العتيبي",
+  name: "أبو فهدي قناعي",
   role: "صاحب عمل",
   image: "s2.jpg",
   review:
@@ -527,7 +531,7 @@ CareersPage: {
 },
 {
   id: 3,
-  name: "عمر الفاروق",
+  name: "أبو حمزة الغامدي",
   role: "عميل تجاري",
   image: "s3.jpg",
   review:
