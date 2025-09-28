@@ -4,6 +4,9 @@ import pr8 from "../../assets/pr8.jpg";
 import pr4 from "../../assets/pr4.jpg";
 import pr5 from "../../assets/pr5.jpg"; 
 import pr6 from "../../assets/pr6.jpg";
+import pr7 from "../../assets/pr7.jpg";
+import pr9 from "../../assets/pr9.jpg";
+import pr10 from "../../assets/pr10.jpg";
 // add more as needed
 
 export const projectImages = {
@@ -13,4 +16,7 @@ export const projectImages = {
   4: pr2,
   5: pr3,
   6: pr8,
+  7: pr7,
+  8: pr9,
+  9: pr10
 };

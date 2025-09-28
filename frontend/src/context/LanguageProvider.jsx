@@ -101,35 +101,35 @@ const translations = {
       reviews: [
         {
           id: 1,
-          name: "Sheikh Musafir",
-          role: "Contractor",
-          image: "mm2.jpg",
+          name: "Ahmed bin Ali Al-Ansari",
+          role: "Corporate Client",
+          image: "s1.jpg",
           review:
-            "We recently partnered with SAASA for our construction project, and the experience was outstanding. Their team demonstrated exceptional professionalism, attention to detail, and commitment to quality. From planning to execution.",
+            "Working with Al Tawafuq Advance Contracting Company was a seamless experience. Their team was always available to answer questions, provide updates, and ensure everything went smoothly",
         },
         {
           id: 2,
-          name: "Hamdan Khan",
-          role: "Business Man",
-          image: "mm3.jpeg",
+          name: "Khalid Al-Otaibi",
+          role: "Business Owner",
+          image: "s2.jpg",
           review:
-            "The entire process was seamless. The quality of work delivered exceeded our expectations and timelines were met without compromise.",
+            "Al Tawafuq Advance Contracting Company is one of the best partners we’ve worked with. Their industrial facility construction for our plant was executed flawlessly, with strict adherence to safety and international standards",
         },
         {
           id: 3,
-          name: "Rabi Khan",
-          role: "Business Man",
-          image: "mm4.jpeg",
+          name: "Omar Al-Farooq",
+          role: "Commercial Client",
+          image: "s3.jpg",
           review:
-            "A fantastic experience working with this team. Their dedication and craftsmanship made our project a success.",
+            "The cladding work done by Al Tawafuq Advance Contracting Company was truly exceptional. Our building’s façade has been completely transformed with a modern, professional look that stands out",
         },
         {
           id: 4,
-          name: "Shazim Khan",
-          role: "Business Man",
-          image: "mm5.jpg",
+          name: "Abdullah Al-Farouq",
+          role: "Business Owner",
+          image: "s4.jpg",
           review:
-            "A fantastic experience working with this team. Their dedication and craftsmanship made our project a success.",
+            "We recently hired Al Tawafuq Advance Contracting Company for galvanised steel works, and the results were outstanding. The team delivered structures that are not only strong and durable but also resistant to rust and weather conditions",
         },
       ],
     },
@@ -322,6 +322,37 @@ const translations = {
           "Large-scale warehouse and production plant construction, adhering to global standards.",
         sector: "Industrial",
       },
+      {
+  id: 7,
+  title: "Galvanized Works",
+  description:
+    "At Al Tawafuq Advance Contracting Company, our Galvanized Works services provide durable, long-lasting solutions for structural and industrial applications. We specialize in delivering high-quality galvanized steel products that combine strength, resilience, and corrosion resistance, ensuring that every project stands the test of time. Our expertise covers a wide range of applications, including structural frameworks, roofing systems, pipelines, fences, and industrial facilities. By using advanced hot-dip galvanization techniques, we guarantee superior protection against rust, harsh weather, and heavy usage, making our solutions ideal for both residential and commercial projects. Each project is executed with strict adherence to international safety and quality standards, ensuring precision, reliability, and efficiency at every stage.",
+  detail:
+    "High-quality galvanized steel works for structures, roofing, and industrial facilities with superior durability and corrosion resistance.",
+  sector: "Galvanized",
+},
+
+
+      {
+  id: 8,
+  title: "Paint Works",
+  description:
+    "At Al Tawafuq Advance Contracting Company, we deliver professional paint works that enhance the beauty, durability, and protection of buildings. Our services include interior and exterior painting, industrial coatings, protective finishes, and decorative treatments tailored to each client’s needs. We use premium quality paints and advanced techniques to ensure smooth finishes, long-lasting color retention, and resistance to weathering. Whether it is residential, commercial, or industrial projects, our painting solutions are designed to combine aesthetics with functionality. Every project is executed with attention to detail, safety, and compliance with international standards.",
+  detail:
+    "High-quality interior, exterior, and industrial painting solutions that combine aesthetics and durability.",
+  sector: "Paint",
+},
+
+      {
+  id: 9,
+  title: "AC Ducting Works",
+  description:
+    "At Al Tawafuq Advance Contracting Company, our AC Ducting Works services ensure efficient, reliable, and energy-saving air distribution systems for residential, commercial, and industrial buildings. We specialize in the design, fabrication, and installation of high-quality ducting systems using advanced materials and technologies. Our expertise covers HVAC ducting, insulation, and air balancing to guarantee maximum comfort, indoor air quality, and system performance. Each ducting project is delivered with precision engineering and strict compliance with international safety and environmental standards. By providing sustainable and cost-effective solutions, we help clients achieve long-term efficiency and comfort in their facilities.",
+  detail:
+    "Efficient and durable AC ducting systems designed and installed to meet international HVAC standards.",
+  sector: "AC Ducting",
+},
+
     
     ],
 
@@ -353,6 +384,8 @@ const translations = {
       phone1: "+966556655605",
       contact2: "Muhammad Saeed",
       phone2: "+966535007727",
+      contact3: "Muhammad Shakir Qureshi",
+      phone3: "+966571496701",
       telefax: "Telefax: (Provide if available)",
       poBox: "PO Box: 10433 – Code: 21331",
       followUs: "Follow Us",
@@ -477,37 +510,38 @@ CareersPage: {
       subtitle: "ماذا يقول عملاؤنا",
       reviews: [
         {
-          id: 1,
-          name: "الشيخ مسافر",
-          role: "مقاول",
-          image: "mm2.jpg",
-          review:
-            "تعاونّا مؤخراً مع شركة التوافق المتقدمة لمشروعنا الإنشائي، وكانت التجربة رائعة. أظهر فريقهم احترافية عالية، واهتماماً بالتفاصيل، والتزاماً بالجودة من التخطيط حتى التنفيذ.",
-        },
-        {
-          id: 2,
-          name: "حمدان خان",
-          role: "رجل أعمال",
-          image: "mm3.jpeg",
-          review:
-            "كانت العملية بأكملها سلسة. الجودة التي تم تسليمها تجاوزت توقعاتنا، وتم الالتزام بالجداول الزمنية دون أي تنازل.",
-        },
-        {
-          id: 3,
-          name: "ربي خان",
-          role: "رجل أعمال",
-          image: "mm4.jpeg",
-          review:
-            "تجربة رائعة مع هذا الفريق. تفانيهم ومهارتهم جعلت مشروعنا ناجحاً.",
-        },
-        {
-          id: 4,
-          name: "شازم خان",
-          role: "رجل أعمال",
-          image: "mm5.jpg",
-          review:
-            "تجربة رائعة مع هذا الفريق. تفانيهم ومهارتهم جعلت مشروعنا ناجحاً.",
-        },
+  id: 1,
+  name: "أحمد بن علي الأنصاري",
+  role: "عميل شركات",
+  image: "s1.jpg",
+  review:
+    "كان العمل مع شركة التوافق المتقدمة للمقاولات تجربة سلسة للغاية. كان فريقهم دائمًا متاحًا للإجابة على الأسئلة، وتقديم التحديثات، وضمان سير كل شيء بسلاسة.",
+},
+{
+  id: 2,
+  name: "خالد العتيبي",
+  role: "صاحب عمل",
+  image: "s2.jpg",
+  review:
+    "شركة التوافق المتقدمة للمقاولات هي واحدة من أفضل الشركاء الذين عملنا معهم. تم تنفيذ مشروع إنشاء منشأتنا الصناعية بشكل مثالي، مع الالتزام الصارم بمعايير السلامة والمعايير الدولية.",
+},
+{
+  id: 3,
+  name: "عمر الفاروق",
+  role: "عميل تجاري",
+  image: "s3.jpg",
+  review:
+    "كان عمل الكسوة الذي قامت به شركة التوافق المتقدمة للمقاولات متميزًا حقًا. لقد تحول واجهة مبنانا بالكامل إلى مظهر حديث واحترافي يبرز بوضوح.",
+},
+{
+  id: 4,
+  name: "عبد الله الفاروق",
+  role: "صاحب عمل",
+  image: "s4.jpg",
+  review:
+    "لقد قمنا مؤخرًا بتوظيف شركة التوافق المتقدمة للمقاولات لأعمال الفولاذ المجلفن، وكانت النتائج مذهلة. قدم الفريق هياكل قوية ومتينة ومقاومة للصدأ والعوامل الجوية.",
+},
+
       ],
     },
 
@@ -695,6 +729,36 @@ CareersPage: {
       "منشآت صناعية واسعة النطاق وبنية تحتية تم تطويرها وفقًا للمعايير العالمية.",
     sector: "صناعي",
   },
+  {
+  id: 7,
+  title: "أعمال الجلفنة",
+  description:
+    "في شركة التوافق المتقدمة للمقاولات، نقدم خدمات أعمال الجلفنة التي توفر حلولاً متينة وطويلة الأمد للتطبيقات الهيكلية والصناعية. نحن متخصصون في تقديم منتجات فولاذية مجلفنة عالية الجودة تجمع بين القوة والمرونة ومقاومة التآكل، مما يضمن أن كل مشروع يصمد أمام اختبار الزمن. تشمل خبرتنا مجموعة واسعة من التطبيقات مثل الهياكل الإنشائية، أنظمة الأسقف، الأنابيب، الأسوار، والمنشآت الصناعية. ومن خلال استخدام تقنيات الجلفنة بالغمس الساخن المتقدمة، نضمن حماية فائقة ضد الصدأ والظروف الجوية القاسية والاستخدام المكثف، مما يجعل حلولنا مثالية للمشاريع السكنية والتجارية. يتم تنفيذ كل مشروع بدقة ووفق التزام صارم بمعايير الجودة والسلامة الدولية، بما يضمن الكفاءة والموثوقية في كل مرحلة.",
+  detail:
+    "أعمال فولاذية مجلفنة عالية الجودة للهياكل والأسقف والمنشآت الصناعية بمتانة فائقة ومقاومة للتآكل.",
+  sector: "الجلفنة",
+},
+
+{
+  id: 8,
+  title: "أعمال الدهانات",
+  description:
+    "في شركة التوافق المتقدمة للمقاولات، نقدم أعمال دهانات احترافية تعزز جمال المباني ومتانتها وحمايتها. تشمل خدماتنا الدهانات الداخلية والخارجية، الطلاءات الصناعية، التشطيبات الواقية، والمعالجات الزخرفية المصممة وفقًا لاحتياجات كل عميل. نستخدم دهانات عالية الجودة وتقنيات متطورة لضمان تشطيبات ناعمة، وثبات طويل الأمد للألوان، ومقاومة للعوامل الجوية. سواء في المشاريع السكنية أو التجارية أو الصناعية، تم تصميم حلولنا في الدهانات لتجمع بين الجماليات والوظائف العملية. يتم تنفيذ كل مشروع بعناية فائقة، مع الالتزام بمعايير السلامة والجودة الدولية.",
+  detail:
+    "حلول دهانات داخلية وخارجية وصناعية عالية الجودة تجمع بين الجمال والمتانة.",
+  sector: "الدهانات",
+},
+
+{
+  id: 9,
+  title: "أعمال مجاري الهواء (التكييف)",
+  description:
+    "في شركة التوافق المتقدمة للمقاولات، تضمن خدمات مجاري الهواء (التكييف) لدينا أنظمة توزيع هواء فعالة وموثوقة وموفرة للطاقة في المباني السكنية والتجارية والصناعية. نحن متخصصون في تصميم وتصنيع وتركيب أنظمة مجاري هواء عالية الجودة باستخدام مواد وتقنيات متقدمة. تشمل خبرتنا مجاري أنظمة التكييف، العزل، وتحقيق توازن الهواء لضمان أقصى درجات الراحة وجودة الهواء الداخلي وأداء النظام. يتم تنفيذ كل مشروع بدقة هندسية ووفق التزام صارم بمعايير السلامة والبيئة الدولية. ومن خلال تقديم حلول مستدامة وفعالة من حيث التكلفة، نساعد عملاءنا على تحقيق الكفاءة والراحة طويلة الأمد في منشآتهم.",
+  detail:
+    "أنظمة مجاري هواء للتكييف عالية الكفاءة والمتانة مصممة ومركبة وفقًا لمعايير HVAC الدولية.",
+  sector: "مجاري الهواء",
+}
+
     ],
 
     certificationsPage: {
@@ -724,6 +788,8 @@ CareersPage: {
       phone1: "+966556655605",
       contact2: "محمد سعيد",
       phone2: "+966535007727",
+      contact3: "محمد شاكر قريشي",
+      phone3: "+966571496701",
       telefax: "فاكس: (يُضاف عند توفره)",
       poBox: "ص.ب: 10433 – الرمز: 21331",
       followUs: "تابعنا",

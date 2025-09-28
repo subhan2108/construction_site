@@ -8,7 +8,7 @@ export default function Testimonials() {
   const { t } = useLanguage();
 
   return (
-    <section className="testimonials">
+    <section className="testimonials" dir="ltr">
       <h3>{t.testimonials.title}</h3>
       <h2>{t.testimonials.subtitle}</h2>
 

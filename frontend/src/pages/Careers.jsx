@@ -48,6 +48,7 @@ export default function Careers() {
             display: "flex",
             flexDirection: "column",
             gap: "1rem",
+            marginBottom: "10rem",
           }}
         >
           <input

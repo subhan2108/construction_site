@@ -37,7 +37,7 @@ export default function Contact() {
     >
       <div
         style={{
-          display: "flex",
+          display: "grid",
           gap: "2rem",
           alignItems: "flex-start",
           maxWidth: "1000px",
@@ -115,13 +115,13 @@ export default function Contact() {
         >
           <iframe
             title="business-location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3709.862145948897!2d39.16050907402704!3d21.591303468222236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3d085a451478b%3A0x1d8c9464245c40ff!2z2KfZhNmC2YbYtdmE2YrYqSDYp9mE2LnYp9mF2Kkg2YTZhNis2LLYp9im2LEg2KjYrNiv2Kk!5e0!3m2!1shi!2sin!4v1758726415505!5m2!1shi!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3705.4245052543065!2d39.20092137527727!3d21.763825680075797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjHCsDQ1JzQ5LjgiTiAzOcKwMTInMTIuNiJF!5e0!3m2!1shi!2sin!4v1759038621429!5m2!1shi!2sin"
             width="100%"
             height="100%"
             style={{ border: 0 }}
-            allowFullScreen=""
+            allowfullscreen=""
             loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
+            referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
       </div>
