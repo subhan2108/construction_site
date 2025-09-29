@@ -64,7 +64,7 @@ export default function Home() {
   return (
   <>
       <Helmet>
-        <title>Al Tawafuk – Construction & Contracting</title>
+        <title>Al Tawafuk Contracting – Construction & Engineering Experts</title>
         <meta
           name="description"
           content="Al Tawafuk offers professional contracting, construction, and engineering services with quality and reliability."
@@ -77,6 +77,12 @@ export default function Home() {
         <meta property="og:description" content="Professional contracting and engineering services." />
         <meta property="og:url" content="https://www.al-tawafuk.com/" />
         <meta property="og:type" content="website" />
+
+        {/* ✅ Canonical tag */}
+  <link rel="canonical" href="https://www.al-tawafuk.com/" />
+
+  {/* ✅ Robots tag */}
+  <meta name="robots" content="index, follow" />
 
         {/* Facebook / LinkedIn Open Graph */}
   <meta property="og:title" content="Al Tawafuk Contracting Company" />
