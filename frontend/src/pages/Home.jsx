@@ -13,6 +13,8 @@ import "swiper/css/pagination";
 import { useLanguage } from "../context/LanguageProvider";
 import { serviceImages } from "./data/images"; // ✅ import shared images
 import { projectImages } from "./data/projectImages";
+import { Helmet } from "react-helmet";
+
 
 // ✅ Counter: animates only when section in view
 function Counter({ target, duration = 2, inView }) {
@@ -60,6 +62,65 @@ export default function Home() {
   ];
 
   return (
+  <>
+      <Helmet>
+        <title>Al Tawafuk – Construction & Contracting</title>
+        <meta
+          name="description"
+          content="Al Tawafuk offers professional contracting, construction, and engineering services with quality and reliability."
+        />
+        <meta
+          name="keywords"
+          content="Construction, Contracting, Engineering, Civil Works, Projects, Services, Saudi Arabia"
+        />
+        <meta property="og:title" content="Al Tawafuk – Construction & Contracting" />
+        <meta property="og:description" content="Professional contracting and engineering services." />
+        <meta property="og:url" content="https://www.al-tawafuk.com/" />
+        <meta property="og:type" content="website" />
+
+        {/* Facebook / LinkedIn Open Graph */}
+  <meta property="og:title" content="Al Tawafuk Contracting Company" />
+  <meta
+    property="og:description"
+    content="Leading contracting and construction services in Saudi Arabia."
+  />
+  <meta property="og:image" content="https://www.al-tawafuk.com/banner1.jpg" />
+  <meta property="og:url" content="https://www.al-tawafuk.com/" />
+  <meta property="og:type" content="website" />
+
+  {/* Twitter Card */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Al Tawafuk Contracting Company" />
+  <meta
+    name="twitter:description"
+    content="Trusted partner in construction and engineering solutions."
+  />
+  <meta name="twitter:image" content="https://www.al-tawafuk.com/banner1.jpg" />
+
+  <script type="application/ld+json">
+{`
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Al Tawafuk Contracting Company",
+  "url": "https://www.al-tawafuk.com",
+  "logo": "https://www.al-tawafuk.com/logo.png",
+  "sameAs": [
+    "https://www.facebook.com/yourpage",
+    "https://www.linkedin.com/company/yourcompany"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": ["+966-571-496-701", "+966-535-007-727", "+966-556-655-605"],
+    "contactType": "Customer Service",
+    "areaServed": "SA",
+    "availableLanguage": ["English", "Arabic"]
+  }
+}
+`}
+</script>
+
+      </Helmet>
     <div
       id="translate-area"
       className="font-sans text-gray-800"
@@ -337,5 +398,6 @@ export default function Home() {
         <Testimonials />
       </section>
     </div>
+  </>
   );
 }
