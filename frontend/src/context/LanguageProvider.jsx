@@ -282,14 +282,15 @@ const translations = {
       },
 
       {
-    id: 2,
-    title: "Redefining Commercial Excellence",
-    description:
-      "We deliver innovative commercial projects, including office towers, retail spaces, and mixed-use developments. Our expertise covers structural works, advanced MEP systems, façade engineering, and interior fit-outs. Each commercial project is designed to enhance business productivity, provide flexible spaces, and integrate modern technologies while maintaining the highest standards of safety and sustainability.",
-    detail:
-      "High-rise and mixed-use projects executed with modern design and efficiency.",
-    sector: "Commercial",
-  },
+  id: 2,
+  title: "Precision Coring Solutions",
+  description:
+    "Our coring work services deliver precise, efficient, and safe solutions for a wide range of construction and infrastructure projects. We specialize in concrete coring, wall and slab openings, and structural modifications required for plumbing, electrical, HVAC, and fire protection systems. Using advanced diamond drilling techniques and state-of-the-art equipment, we ensure accuracy without compromising the strength and integrity of the structure. Our team is skilled in handling projects across commercial, industrial, and residential sectors, from small openings to large-scale coring works. We emphasize dust-free, vibration-controlled operations, enabling work in sensitive environments such as hospitals, high-rise buildings, and operational facilities. With a strong commitment to quality, safety, and timely delivery, our coring solutions support seamless integration of essential services while adhering to international construction standards. Whether for renovations, retrofitting, or new developments, our expertise ensures durable, cost-effective, and highly reliable results.",
+  detail:
+    "High-precision concrete coring and structural modifications with advanced techniques.",
+  sector: "Civil Works",
+},
+
   {
     id: 3,
     title: "Driving Industrial Growth",

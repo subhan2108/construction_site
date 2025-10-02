@@ -3,7 +3,7 @@ import pr3 from "../../assets/pr3.jpg";
 import pr8 from "../../assets/pr8.jpg";
 import pr4 from "../../assets/pr4.jpg";
 import pr5 from "../../assets/pr5.jpg"; 
-import pr6 from "../../assets/pr6.jpg";
+import pr11 from "../../assets/pr11.jpg";
 import pr7 from "../../assets/pr7.jpg";
 import pr9 from "../../assets/pr9.jpg";
 import pr10 from "../../assets/pr10.jpg";
@@ -11,7 +11,7 @@ import pr10 from "../../assets/pr10.jpg";
 
 export const projectImages = {
   1: pr4,
-  2: pr6,
+  2: pr11,
   3: pr5,
   4: pr2,
   5: pr3,
