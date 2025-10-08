@@ -60,7 +60,7 @@ class Message(models.Model):
 
 class Certification(models.Model):
     title = models.CharField(max_length=200)
-    file = models.FileField(upload_to="certifications/")
+    image_url = models.URLField(max_length=500, blank=True, null=True)
     lang = models.CharField(max_length=2, choices=[("EN", "English"), ("AR", "Arabic")], default="EN")
 
     def __str__(self):

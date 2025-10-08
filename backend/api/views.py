@@ -52,6 +52,15 @@ class CertificationListView(generics.ListAPIView):
     queryset = Certification.objects.all()
     serializer_class = CertificationSerializer
 
+
+def get_queryset(self):
+        queryset = Certification.objects.all()
+        lang = self.request.query_params.get("lang")
+        if lang:
+            queryset = queryset.filter(lang__iexact=lang)
+        return queryset
+
+
 class HSEPolicyListView(generics.ListAPIView):
     queryset = HSEPolicy.objects.all()
     serializer_class = HSEPolicySerializer

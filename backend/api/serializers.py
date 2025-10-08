@@ -36,6 +36,7 @@ class CertificationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Certification
         fields = "__all__"
+        
 
 
 class HSEPolicySerializer(serializers.ModelSerializer):
