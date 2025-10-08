@@ -13,7 +13,7 @@ export default function Certifications() {
   useEffect(() => {
     async function fetchCerts() {
       try {
-        const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/certifications/`);
+        const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/certifications/`);
         if (!res.ok) throw new Error("Failed to fetch certifications");
         const data = await res.json();
         setCerts(data);
@@ -73,7 +73,7 @@ export default function Certifications() {
           </motion.p>
         </div>
       </section>
-      
+
       {/* ✅ Certifications Grid */}
       <section className="py-16 px-6 md:px-12 bg-gray-50">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-red-600">
