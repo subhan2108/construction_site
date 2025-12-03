@@ -85,7 +85,7 @@ export default function Footer() {
   {/* WhatsApp Button */}
  {showTop && ( 
   <a
-    href="https://wa.me/966571496701" // <-- Replace with your WhatsApp number
+    href="https://wa.me/960560302049" // <-- Replace with your WhatsApp number
     target="_blank"
     rel="noopener noreferrer"
     className="bg-green-500 text-white w-12 h-12 flex items-center justify-center rounded-full shadow-lg 
@@ -99,7 +99,7 @@ export default function Footer() {
  {showTop && ( 
 
   <a
-    href="tel:+966571496701" // ✅ Direct dial
+    href="tel:+960560302049" // ✅ Direct dial
     className="bg-green-400 text-white w-12 h-12 flex items-center justify-center rounded-full shadow-lg 
                transition-transform duration-300 ease-in-out transform hover:scale-110 hover:bg-green-500"
   >

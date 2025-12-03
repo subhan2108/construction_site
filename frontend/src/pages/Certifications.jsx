@@ -7,8 +7,21 @@ import { useLanguage } from "../context/LanguageProvider";
 
 export default function Certifications() {
   const { t, lang } = useLanguage();
-  const [certs, setCerts] = useState([]);
+  
   const [loading, setLoading] = useState(true);
+
+   const certs = [
+    { id: 1, title: "ISO 9001", file: "cr1.jpg" },
+    { id: 2, title: "ISO 14001", file: "cr2.jpg" },
+    { id: 3, title: "OHSAS 18001", file: "cr3.jpg" },
+    { id: 4, title: "OHSAS 18001", file: "cr4.jpg" },
+    { id: 5, title: "OHSAS 18001", file: "cr5.jpg" },
+    { id: 6, title: "OHSAS 18001", file: "cr6.jpg" },
+    { id: 7, title: "OHSAS 18001", file: "cr7.jpg" },
+  ];
+
+
+    const [zoomImage, setZoomImage] = useState(null);
 
   useEffect(() => {
     async function fetchCerts() {
@@ -80,33 +93,30 @@ export default function Certifications() {
           {t.certificationsPage.gridtitle}
         </h2>
 
-        {loading ? (
-          <p className="text-center text-gray-500">Loading certifications...</p>
-        ) : (
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-            {certs.map((c, idx) => (
-              <motion.div
-                key={c.id}
-                className="cert-card bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition transform hover:-translate-y-2"
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: idx * 0.2 }}
-                viewport={{ once: true }}
-              >
-                <img
-                  src={c.image_url}
-                  alt={c.title}
-                  className="h-64 w-full object-contain p-4 transition-transform duration-500 hover:scale-105"
-                />
-                <div className="p-4 text-center">
-                  <h3 className="text-lg font-semibold text-gray-800">
-                    {c.title}
-                  </h3>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        )}
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          {certs.map((c, idx) => (
+            <motion.div
+              key={c.id}
+              className="cert-card bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition transform hover:-translate-y-2"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: idx * 0.2 }}
+              viewport={{ once: true }}
+            >
+              <img
+                src={c.file}
+                alt={c.title}
+                className="h-64 w-full object-contain p-4 transition-transform duration-500 hover:scale-105 cursor-zoom"
+                onClick={() => setZoomImage(c.file)}
+              />
+              <div className="p-4 text-center">
+                <h3 className="text-lg font-semibold text-gray-800">
+                  {c.title}
+                </h3>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </section>
 
       {/* Why Choose Us */}
@@ -114,6 +124,38 @@ export default function Certifications() {
 
       {/* Testimonials */}
       <Testimonials />
+
+
+
+
+
+
+{zoomImage && (
+  <div 
+    className="fixed inset-0 bg-black/80 flex justify-center items-center z-[9999] p-4"
+    onClick={() => setZoomImage(null)}
+  >
+    <motion.img
+      src={zoomImage}
+      alt="Zoomed Certificate"
+      initial={{ scale: 0 }}
+      animate={{ scale: 1 }}
+      transition={{ duration: 0.4 }}
+      className="max-h-[90vh] max-w-[90vw] object-contain rounded-lg shadow-lg h-[100vh]"
+    />
+
+    {/* Close Button */}
+    <button
+      onClick={() => setZoomImage(null)}
+      className="absolute top-6 right-6 text-white text-4xl font-bold hover:text-red-500"
+    >
+      &times;
+    </button>
+  </div>
+)}
+
+
+
     </div>
   );
 }
